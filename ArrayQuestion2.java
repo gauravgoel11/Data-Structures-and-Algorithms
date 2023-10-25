@@ -7,6 +7,7 @@ public class ArrayQuestion2 {
 
     Scanner sc = new Scanner(System.in);
     int i = sc.nextInt();
+    sc.close();
 
     for (int index = i; index < arr.length; index++) {
       System.out.print(arr[index] + " ");
