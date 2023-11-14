@@ -1,25 +1,33 @@
-
-
 public class SearchInSortedMatrix {
 
-    public static void main(String[] args) {
-       int matrix[][]={ {1,2,3,4},
-                        {5,6,7,8},
-                        {9,10,11,12},
-                        {13,14,15,16}};
+  public static void main(String[] args) {
+    int matrix[][] = {
+      { 1, 2, 3, 4 },
+      { 5, 6, 7, 8 },
+      { 9, 10, 11, 12 },
+      { 13, 14, 15, 16 },
+    };
 
-        
+    int key = 17;
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
+    int row = 0;
+    int colm = matrix[0].length - 1;
+    boolean keyFound = false;
 
-                int row = 0;
-                int colm = matrix[0].length-1;
-                
-            }
-            
-        }
-                
-            }   
-        }
-    //adding a comment
+    while (row <= matrix.length - 1 && colm >= 0) {
+      if (key == matrix[row][colm]) {
+        System.out.println("Position is " + row + "," + colm);
+        keyFound = true;
+        break;
+      } else if (key > matrix[row][colm]) {
+        row++;
+      } else if (key < matrix[row][colm]) {
+        colm--;
+      }
+    }
+
+    if (!keyFound) {
+      System.out.println("Key not found");
+    }
+  }
+}
