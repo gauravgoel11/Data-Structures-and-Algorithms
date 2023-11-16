@@ -26,21 +26,20 @@ public class DiagonalSum {
 
     // Loop for the secondary diagonal
     for (int i = 0; i < matrix.length; i++) {
-        for (int j = matrix[0].length - 1; j >= 0; j--) {
-            if (i + j == matrix.length - 1) {
-                sum = sum + matrix[i][j];
-            }
+      for (int j = matrix[0].length - 1; j >= 0; j--) {
+        if (i + j == matrix.length - 1) {
+          sum = sum + matrix[i][j];
         }
+      }
     }
 
     // Loop for the main diagonal
     for (int k = 0; k < matrix.length; k++) {
-        sum = sum + matrix[k][k];
+      sum = sum + matrix[k][k];
     }
 
     System.out.println(sum);
-}
-
+  }
 
   public static void main(String[] args) {
     int row;

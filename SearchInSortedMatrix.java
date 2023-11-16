@@ -8,7 +8,7 @@ public class SearchInSortedMatrix {
       { 13, 14, 15, 16 },
     };
 
-    int key = 17;
+    int key = 0;
 
     int row = 0;
     int colm = matrix[0].length - 1;
@@ -16,7 +16,7 @@ public class SearchInSortedMatrix {
 
     while (row <= matrix.length - 1 && colm >= 0) {
       if (key == matrix[row][colm]) {
-        System.out.println("Position is " + row + "," + colm);
+        System.out.println("Position is " + (row+1) + "," + (colm+1));
         keyFound = true;
         break;
       } else if (key > matrix[row][colm]) {
