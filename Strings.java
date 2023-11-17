@@ -13,8 +13,8 @@ public class Strings {
     String name = "Gaurav";
     String sirname = "Goel";
     String fullname = name+" "+sirname;
-
     System.out.println(fullname);
+    
 
   }
 }
