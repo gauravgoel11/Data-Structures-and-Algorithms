@@ -1,10 +1,24 @@
+import java.util.Scanner;
+
 public class Test {
 
   public static void main(String[] args) {
-    int num = 65;
-    for (int j = num; j <123; j++) {
-      char k = (char) j;
-      System.out.println(k);
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int arr[] = new int[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = sc.nextInt();
     }
+    int min = arr[0];
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+      if (arr[i] < min) {
+        min = arr[i];
+      }
+      if (arr[i] > max) {
+        max = arr[i];
+      }
+    }
+    System.out.println("[" + min + ":" + max + "]");
   }
 }
