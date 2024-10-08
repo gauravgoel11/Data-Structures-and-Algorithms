@@ -21,6 +21,15 @@ public class Day2 {
     return -1;
   }
 
+  public static void reverseArray(int arr[]) {
+    int temp = 0;
+    for (int i = 0; i < (arr.length) / 2; i++) {
+      temp = arr[i];
+      arr[i] = arr[arr.length - 1 - i];
+      arr[arr.length - 1 - i] = temp;
+    }
+  }
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int num = sc.nextInt();
@@ -28,7 +37,11 @@ public class Day2 {
     for (int i = 0; i < num; i++) {
       arr[i] = sc.nextInt();
     }
-    int key = sc.nextInt();
-    System.out.println(BinarySearch(arr, key));
+    // int key = sc.nextInt();
+    // System.out.println(BinarySearch(arr, key));
+    reverseArray(arr);
+    for (int i = 0; i < num; i++) {
+      System.out.print(arr[i]+" ");
+    }
   }
 }
