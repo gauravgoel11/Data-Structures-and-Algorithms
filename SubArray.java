@@ -21,4 +21,3 @@ public class SubArray {
     }
   }
 }
-// adding a comment
